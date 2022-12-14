@@ -68,20 +68,85 @@
 					<button class="range-toggle toggle-max" type="button">
 						<span class="visually-hidden">Изменить максимальную цену</span>
 					</button>
-					<label class="catalog-filter-label">от
-						<input class="catalog-filter-input" type="number" name="minimum-price"> ₽
+
+					<label class="catalog-filter-label">
+						от <input class="catalog-filter-input" type="number" name="minimum-price"> ₽
 					</label>
-					<label for="catalog-filter-label">до
-						<input class="catalog-filter-input" type="number" name="minimum-price"> ₽
+					<label for="catalog-filter-label">
+						до <input class="catalog-filter-input" type="number" name="maximum-price"> ₽
 					</label>
+
 				</fieldset>
 				<fieldset class="catalog-filter-group">
 					<legend class="catalog-filter-title">Производители</legend>
+					<ul class="catalog-filter-list">
+						<li class="catalog-filter-item">
+							<label class="control">
+								<input class="visually-hidden control-input" type="checkbox" name="bed-head-for-men">
+								<span class="control-mark"></span>
+								<span class="control-label">Bed Head for Men</span>
+							</label>
+						</li>
+						<li class="catalog-filter-item">
+							<label class="control">
+								<input class="visually-hidden control-input" type="checkbox" name="homme-deep-cleansing-cool"
+									checked>
+								<span class="control-mark"></span>
+								<span class="control-label">Homme Deep Cleansing Cool</span>
+							</label>
+						</li>
+						<li class="catalog-filter-item">
+							<label class="control">
+								<input class="visually-hidden control-input" type="checkbox" name="so-intense" checked>
+								<span class="control-mark"></span>
+								<span class="control-label">So Intense</span>
+							</label>
+						</li>
+						<li class="catalog-filter-item">
+							<label class="control">
+								<input class="visually-hidden control-input" type="checkbox" name="sprekenhus">
+								<span class="control-mark"></span>
+								<span class="control-label">Sprekenhus</span>
+							</label>
+						</li>
+						<li class="catalog-filter-item">
+							<label class="control">
+								<input class="visually-hidden control-input" type="checkbox" name="firm-storе">
+								<span class="control-mark"></span>
+								<span class="control-label">Firm Storе</span>
+							</label>
+						</li>
+						<li class="catalog-filter-item">
+							<label class="control">
+								<input class="visually-hidden control-input" type="checkbox" name="winter-body" checked>
+								<span class="control-mark"></span>
+								<span class="control-label">Winter Body</span>
+							</label>
+						</li>
+					</ul>
 				</fieldset>
 				<fieldset class="catalog-filter-group">
 					<legend class="catalog-filter-title">Группы товаров</legend>
+					<ul class="catalog-filter-list">
+						<li class="catalog-filter-item">
+							<input class="visually-hidden control-input" type="radio" name="product-group"
+								value="shaving-supplies">
+							<span class="control-mark"></span>
+							<span class="control-label">Бритвенные принадлежности</span>
+						</li>
+						<li class="catalog-filter-item">
+							<input class="visually-hidden control-input" type="radio" name="product-group"
+								value="care-products">
+							<span class="control-mark"></span>
+							<span class="control-label">Средства для ухода</span>
+						</li>
+						<li class="catalog-filter-item">
+							<input class="visually-hidden control-input" type="radio" name="product-group" value="accessories">
+							<span class="control-mark"></span>
+							<span class="control-label">Аксессуары</span>
+						</li>
+					</ul>
 				</fieldset>
-
 				<button class="button" type="submit">Показать</button>
 			</form>
 		</section>
