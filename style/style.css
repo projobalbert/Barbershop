@@ -89,6 +89,7 @@ body {
 /* Навигация */
 .navigation {
 	display: flex;
+	align-items: center;
 	width: 940px;
 	margin: 0 auto;
 }
@@ -407,35 +408,47 @@ body {
 .footer-socials-item {
 	width: 56px;
 	height: 44px;
+	margin-bottom: 8px;
 }
 
 .footer-socials-item:not(:nth-child(3n)) {
 	margin-right: 8px;
 }
 
-.footer-socials-item .button {}
-
 .author-link {
 	color: #AF7842;
 }
 
 
-/* Каталог */
+/* Page-catalog */
 .navigation-logo {
 	width: 140px;
 	margin-right: 100px;
 }
 
+.page-header-logo {
+	display: flex;
+	align-items: center;
+}
+
 /* Хлебные кроши */
 .breadcrumbs {
 	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
-.breadcrumbs-link {
+.breadcrumbs-item {
+	margin-right: 32px;
 	color: #242424;
 }
 
-.breadcrumbs-link:last-child {
+.breadcrumbs-link {
+	color: inherit;
+}
+
+.breadcrumbs-item:last-child {
 	color: #595959;
 }
 
