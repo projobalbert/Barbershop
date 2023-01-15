@@ -164,6 +164,9 @@ body {
 	margin: auto 0;
 }
 
+.navigation-link:hover .navigation-icon {
+	fill: #242424;
+}
 
 /* main */
 .main-conteiner {
@@ -215,8 +218,23 @@ body {
 }
 
 .advantages-title {
+	position: relative;
 	margin-top: 0;
 	margin-bottom: 56px;
+}
+
+.advantages-title::before {
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 50%;
+	top: 54px;
+	margin-left: -8px;
+	background-color: #FFFFFF;
+	transform: rotate(45deg);
+
+
 }
 
 .advantages-description {
@@ -224,6 +242,7 @@ body {
 }
 
 .index-columns {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 30px;
@@ -232,6 +251,23 @@ body {
 	background-image: url("/images/noisy-texture.png");
 	background-repeat: repeat;
 	color: #242424;
+}
+
+.index-columns::before {
+	position: absolute;
+	content: "";
+	top: 40px;
+	bottom: 40px;
+	width: 0;
+	border-left: 1px dotted #595959;
+}
+
+.index-columns:first-of-type::before {
+	left: 470px;
+}
+
+.index-columns:nth-of-type(2)::before {
+	left: 430px;
 }
 
 .index-columns:last-child {
@@ -261,8 +297,19 @@ body {
 
 .services-item {
 	display: flex;
+	align-items: baseline;
 	justify-content: space-between;
 	margin-bottom: 22px;
+}
+
+.services-item::before {
+	content: "";
+	flex-grow: 1;
+	order: 2;
+	margin-left: 16px;
+	margin-right: 16px;
+	border-bottom: 2px dotted #595959;
+	opacity: 0.5
 }
 
 .services-item:last-child {
@@ -270,6 +317,7 @@ body {
 }
 
 .services-price {
+	order: 3;
 	color: #AF7842;
 }
 
@@ -557,6 +605,10 @@ input::placeholder {
 	background-color: #000000;
 }
 
+.footer-social-link:hover {
+	background-color: #814B18;
+}
+
 .footer-social-link-twitter {
 	background-image: url(/images/icons/twitter.svg);
 	background-size: 16px 16px;
@@ -594,6 +646,15 @@ input::placeholder {
 	align-items: center;
 }
 
+.inner-header-title {
+	margin-top: 40px;
+	margin-bottom: 14px;
+}
+
+.inner-header {
+	margin-bottom: 32px;
+}
+
 /* Хлебные кроши */
 .breadcrumbs {
 	display: flex;
@@ -603,17 +664,34 @@ input::placeholder {
 }
 
 .breadcrumbs-item {
+	position: relative;
 	margin-right: 32px;
 	color: #242424;
+}
+
+.breadcrumbs-item:last-child {
+	color: #595959;
+}
+
+.breadcrumbs-item::after {
+	position: absolute;
+	top: 9px;
+	right: -20px;
+	content: "";
+	width: 8px;
+	height: 8px;
+	background-color: #242424;
+	transform: rotate(45deg);
+}
+
+.breadcrumbs-item:last-child:after {
+	content: none;
 }
 
 .breadcrumbs-link {
 	color: inherit;
 }
 
-.breadcrumbs-item:last-child {
-	color: #595959;
-}
 
 /* Каталог товаров */
 .catalog-products {
@@ -789,13 +867,13 @@ input::placeholder {
 	line-height: 16px;
 }
 
+.pagination-link:hover:not(.pagination-current) {
+	background-color: #814B18;
+}
+
 .pagination-prev,
 .pagination-next {
 	width: 56px;
-}
-
-.pagination-prev .pagination-disabled {
-	background: #595959;
 }
 
 .pagination-prev {
@@ -811,6 +889,11 @@ input::placeholder {
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
 	background-position: center;
+}
+
+.pagination-prev:hover,
+.pagination-next:hover {
+	background-color: #814B18;
 }
 
 .pagination-disabled {
