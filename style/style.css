@@ -53,12 +53,18 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	border: none;
-
 }
 
 .button:hover {
 	background-color: #814B18;
 	color: #FFFFFF;
+}
+
+.button:focus {
+	background-color: #814B18;
+	border: 2px solid #DBB590;
+	outline: none;
+
 }
 
 .button+.button {
@@ -122,6 +128,16 @@ body {
 	text-transform: uppercase;
 	color: inherit;
 	text-decoration: none;
+}
+
+.navigation-link-current::after {
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: 0;
+	height: 4px;
+	background-color: #FFFFFF;
+	content: "";
 }
 
 .navigation-icon {
@@ -226,15 +242,13 @@ body {
 .advantages-title::before {
 	content: "";
 	position: absolute;
-	width: 16px;
-	height: 16px;
+	width: 12px;
+	height: 12px;
 	left: 50%;
 	top: 54px;
-	margin-left: -8px;
+	margin-left: -6px;
 	background-color: #FFFFFF;
 	transform: rotate(45deg);
-
-
 }
 
 .advantages-description {
@@ -340,18 +354,77 @@ body {
 	margin-bottom: 28px;
 }
 
-.slider-pagination {
+.slider-wrapper {
+	position: relative;
+}
+
+.slider-image {
+	display: block;
+	margin-bottom: 16px;
+}
+
+.button-container {
+	position: absolute;
 	display: flex;
 	justify-content: space-between;
-	width: 56px;
-	height: 8px;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-30px);
+}
+
+.slider-wrapper .button {
+	width: 48px;
+	height: 60px;
+	background-image: url(/images/icons/arrow-right.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.gallery .button:focus {
+	background-color: #814B18;
+	border: 2px solid #DBB590;
+	outline: none;
+}
+
+.slider-button-prev {
+	transform: rotate(180deg);
+}
+
+/* Slider pagination */
+.slider-pagination {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0;
+	list-style-type: none;
+}
+
+.slider-pagination-item {
+	margin: 0 4px;
 }
 
 .slider-pagination-button {
+	display: block;
 	width: 8px;
 	height: 8px;
+	margin: 0;
+	padding: 0;
 	background-color: #BDBDBD;
+	border: none;
 	border-radius: 50%;
+	cursor: pointer;
+}
+
+.slider-pagination-button:hover {
+	background-color: #814B18;
+}
+
+.slider-pagination-button:focus {
+	background-color: #814B18;
+	border: 2px solid #DBB590;
+	outline: none;
+
 }
 
 .slider-pagination-button-current {
@@ -365,7 +438,7 @@ body {
 
 .contacts-title {
 	margin: 0;
-	margin-bottom: 28px;
+	margin-bottom: 24px;
 }
 
 .contacts-subtitle {
@@ -440,44 +513,63 @@ body {
 .appointment-form {
 	display: grid;
 	grid-template-columns: 114px 74px 208px;
-	row-gap: 19px;
 	column-gap: 17px;
+	row-gap: 19px;
 }
 
 .appointment-form p {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
-}
-
-.appointment-form input {
-	width: 100%;
-	box-sizing: border-box;
-	margin-top: 8px;
-	padding: 10px 16px;
 }
 
 .appointment-form-name {
 	grid-column: 1/-1;
 }
 
-.appointment-form input {
-	border: 2px solid #242424;
-}
-
-input::placeholder {
-	color: #BDBDBD;
-	font-weight: 700;
-}
-
 .appointment-form-button {
 	grid-column: 1/-1;
 	justify-self: start;
-	border: none;
+	margin-top: 2px;
 }
 
-.appointment-form label {
+.form-label {
+	margin-bottom: 8px;
+	font-family: 'PT Sans';
+	font-style: normal;
 	font-weight: 700;
+	font-size: 16px;
 	line-height: 22px;
 	text-transform: uppercase;
+}
+
+.info {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	margin-top: 5px;
+	margin-left: 4px;
+	background-image: url(/images/icons/info.svg);
+	background-repeat: no-repeat;
+	border: none;
+	outline: none;
+}
+
+
+.field {
+	margin: 0;
+	padding: 8px 14px;
+	font: inherit;
+
+	border: 2px solid #242424;
+}
+
+.field::placeholder {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	color: #BDBDBD;
 }
 
 

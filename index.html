@@ -121,36 +121,41 @@
 				<!-- Фотогалерея -->
 				<section class="gallery">
 					<h2 class="title gallery-title">Фотогалерея</h2>
-					<img class="slider-image" src="images/gallery/gallery-1.jpg" width="390" height="250"
-						alt="Примеры работ">
-					<button class="slider-button slider-prev">
-						<span class="visually-hidden">Предыдущая фотография</span>
-					</button>
-					<button class="slider-button slider-next">
-						<span class="visually-hidden">Следующая фотография</span>
-					</button>
-					<ol class="slider-pagination">
-						<li class="slider-pagination-item">
-							<button class="slider-pagination-button slider-pagination-button-current" type="button">
-								<span class="visually-hidden">Первая фотография</span>
+					<div class="slider-wrapper">
+						<img class="slider-image" src="images/gallery/gallery-1.jpg" width="390" height="250"
+							alt="Примеры работ">
+						<div class="button-container">
+							<button class="button slider-button-prev">
+								<span class="visually-hidden">Предыдущая фотография</span>
 							</button>
-						</li>
-						<li class="slider-pagination-item">
-							<button class="slider-pagination-button" type="button">
-								<span class="visually-hidden">Вторая фотография</span>
+							<button class="button slider-button-next">
+								<span class="visually-hidden">Следующая фотография</span>
 							</button>
-						</li>
-						<li class="slider-pagination-item">
-							<button class="slider-pagination-button" type="button">
-								<span class="visually-hidden">Третья фотография</span>
-							</button>
-						</li>
-						<li class="slider-pagination-item">
-							<button class="slider-pagination-button" type="button">
-								<span class="visually-hidden">Четвертая фотография</span>
-							</button>
-						</li>
-					</ol>
+						</div>
+
+						<ol class="slider-pagination">
+							<li class="slider-pagination-item">
+								<button class="slider-pagination-button slider-pagination-button-current" type="button">
+									<span class="visually-hidden">Первая фотография</span>
+								</button>
+							</li>
+							<li class="slider-pagination-item">
+								<button class="slider-pagination-button" type="button">
+									<span class="visually-hidden">Вторая фотография</span>
+								</button>
+							</li>
+							<li class="slider-pagination-item">
+								<button class="slider-pagination-button" type="button">
+									<span class="visually-hidden">Третья фотография</span>
+								</button>
+							</li>
+							<li class="slider-pagination-item">
+								<button class="slider-pagination-button" type="button">
+									<span class="visually-hidden">Четвертая фотография</span>
+								</button>
+							</li>
+						</ol>
+					</div>
 				</section>
 			</div>
 
@@ -190,7 +195,8 @@
 									<span class="visually-hidden">Посмотреть дополнительную информацию</span>
 								</button>
 							</span>
-							<input type="text" name="appointment-date" id="appointment-date" placeholder="01.01.2020">
+							<input class="field" type="text" name="appointment-date" id="appointment-date"
+								placeholder="01.01.2020">
 						</p>
 						<p class="appointment-form-time">
 							<span class="form-label">
@@ -199,15 +205,16 @@
 									<span class="visually-hidden">Посмотреть дополнительную информацию</span>
 								</button>
 							</span>
-							<input type="text" name="appointment-time" id="appointment-time" placeholder="10:10">
+							<input class="field" type="text" name="appointment-time" id="appointment-time" placeholder="10:10">
 						</p>
 						<p class="appointment-form-phone">
-							<label for="appointment-phone">Телефон</label>
-							<input type="tel" name="appointment-phone" id="appointment-phone" placeholder="+7 800 000-00-00">
+							<label class="form-label" for="appointment-phone">Телефон</label>
+							<input class="field" type="tel" name="appointment-phone" id="appointment-phone"
+								placeholder="+7 800 000-00-00">
 						</p>
 						<p class="appointment-form-name">
-							<label for="appointment-name">Ваше имя</label>
-							<input type="text" name="appointment-name" id="appointment-name">
+							<label class="form-label" for="appointment-name">Ваше имя</label>
+							<input class="field" type="text" name="appointment-name" id="appointment-name">
 						</p>
 
 						<button class="appointment-form-button button" type="submit">Записаться</button>
