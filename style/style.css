@@ -53,6 +53,7 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	border: none;
+	cursor: pointer;
 }
 
 .button:hover {
@@ -62,9 +63,7 @@
 
 .button:focus {
 	background-color: #814B18;
-	border: 2px solid #DBB590;
-	outline: none;
-
+	outline: 2px solid #DBB590;
 }
 
 .button+.button {
@@ -547,28 +546,42 @@ body {
 	position: absolute;
 	width: 16px;
 	height: 16px;
-	margin-top: 5px;
+	padding: 0;
+	margin-top: 3px;
 	margin-left: 4px;
 	background-image: url(/images/icons/info.svg);
 	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
 	border: none;
 	outline: none;
 }
 
+.info:focus {
+	outline: 2px solid #242424;
+}
 
 .field {
 	margin: 0;
 	padding: 8px 14px;
 	font: inherit;
-
+	font-weight: 700;
+	font-weight: 700;
+	background-color: #FFFFFF;
 	border: 2px solid #242424;
+	cursor: pointer;
+}
+
+.field:hover,
+.field:focus {
+	border-color: #AF7842;
+}
+
+.field:focus {
+	outline: 2px solid #DBB590;
 }
 
 .field::placeholder {
-	font-style: normal;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 24px;
 	color: #BDBDBD;
 }
 
@@ -800,6 +813,51 @@ body {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 40px;
+	border: none;
+}
+
+.catalog-filter-price {
+	position: relative;
+	margin-bottom: 16px;
+	height: 4px;
+	background-color: #242424;
+	border-radius: 2px;
+}
+
+.catalog-filter-price-range {
+	position: absolute;
+	height: 4px;
+	background-color: #AF7842;
+	border-radius: 2px;
+}
+
+.range-toggle {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background-color: #FFFFFF;
+	border: 2px solid #242424;
+	border-radius: 50%;
+	cursor: pointer;
+	top: -9px;
+}
+
+.range-toggle:hover {
+	background-color: #AF7842;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+	border-color: #AF7842;
+	outline: 2px solid #DBB590;
+}
+
+.toggle-min {
+	left: -11px;
+}
+
+.toggle-max {
+	right: -11px;
 }
 
 .catalog-filter-title {
@@ -808,6 +866,53 @@ body {
 	font-size: 20px;
 	line-height: 28px;
 	text-transform: uppercase;
+	margin-bottom: 22px;
+}
+
+.price-label-container {
+	display: flex;
+	justify-content: center;
+}
+
+.catalog-filter-label {
+	display: flex;
+	margin-right: 4px;
+}
+
+.catalog-filter-input {
+	width: 40px;
+	padding: 0 2px;
+	font: inherit;
+	text-align: center;
+	background-color: transparent;
+	border: none;
+}
+
+.catalog-filter-input::-webkit-outer-spin-button,
+.catalog-filter-input::-webkit-inner-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+.catalog-filter-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.control {
+	position: relative;
+	display: block;
+	padding-left: 36px;
+}
+
+.control-mark {
+	position: absolute;
+	left: 0;
+	top: 2px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #242424;
 }
 
 .control-label {
@@ -819,7 +924,6 @@ body {
 
 .catalog-filter .button {
 	padding: 14px 20px;
-	/* background-color: #000000; */
 }
 
 .catalog-right-column {
