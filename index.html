@@ -49,6 +49,30 @@
 						</svg>
 						<span class="visually-hidden">Корзина</span>
 					</a>
+
+					<!-- Поповер -->
+					<div class="popover cart-popover">
+						<div class="popover-content">
+							<h2 class="popover-title">Корзина</h2>
+							<button class="popover-close">2
+								<span class="visually-hidden">Закрыть</span>
+							</button>
+							<ul class="popover-content-list">
+								<li class="popover-content-item">
+									<h3 class="popover-subtitle">Стрижка машинкой</h3>
+									<div class="cart-price">800 ₽</div>
+									<button class="button cart-delete"></button>
+								</li>
+								<li class="popover-content-item">
+									<h3 class="popover-subtitle">Стрижка усов</h3>
+									<div class="cart-price">1200 ₽</div>
+									<button class="button cart-delete"></button>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+
 				</li>
 				<li class="navigation-item">
 					<a class="navigation-link navigation-link-logo" href="#">
@@ -275,6 +299,40 @@
 			</section>
 		</div>
 	</footer>
+
+	<div class="modal-container modal-container-close">
+		<div class="modal modal-auth">
+			<button class="modal-close-button">
+				<span class="visually-hidden">Закрыть</span>
+			</button>
+			<div class="modal-auth-content">
+				<h2 class="modal-auth-title">Личный кабинет</h2>
+
+				<form class="modal-auth-form" action="" method="post">
+					<p class="field-group">
+						<label class="modal-auth-login" for="login"></label>
+						<input class="field" type="text" id="login" name="login" placeholder="Логин">
+					</p>
+					<p class="field-group">
+						<label class="modal-auth-password" for="password"></label>
+						<input class="field" type="text" id="password" name="password" placeholder="Пароль">
+					</p>
+					<p class="field-group field-user-options">
+						<label class="control">
+							<input class="visually-hidden control-input" type="checkbox" name="remember">
+							<span class="control-mark"></span>
+							<span class="control-label">Запомнить меня</span>
+						</label>
+						<a class="remind-password" href="#">Забыл пароль</a>
+					</p>
+					<button class="button auth-form-button">Войти</button>
+					<a class="button auth-form-register" href="#">Регистрация</a>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
 </body>
 
 </html>

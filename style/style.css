@@ -116,6 +116,10 @@ body {
 	list-style-type: none;
 }
 
+.navigation-item {
+	position: relative;
+}
+
 .navigation-link {
 	position: relative;
 	display: block;
@@ -181,6 +185,104 @@ body {
 
 .navigation-link:hover .navigation-icon {
 	fill: #242424;
+}
+
+.popover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	background-color: #FFFFFF;
+	box-shadow: 0px 18px 40px rgba(79, 70, 60, 0.16);
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.cart-popover {
+	display: none;
+	width: 420px;
+	color: #000000;
+}
+
+/* Открытие поповера */
+.popover-open {
+	display: block;
+}
+
+.popover-content {
+	height: 100%;
+	margin: 40px;
+}
+
+.popover-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 72px;
+	height: 70px;
+	padding: 0;
+	padding-left: 44px;
+	background-image: url(/images/icons/cart.svg);
+	background-repeat: no-repeat;
+	background-position: 22px center;
+	border: none;
+	background-color: #FFFFFF;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: start;
+}
+
+.popover-content {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+	text-transform: uppercase;
+}
+
+.popover-title {
+	margin: 0;
+	margin-bottom: 24px;
+	font-size: 32px;
+	line-height: 35px;
+}
+
+.popover-content-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.popover-content-item {
+	display: grid;
+	grid-template-columns: 1fr 56px;
+}
+
+.popover-content-item:not(:first-child) {
+	margin-top: 32px;
+	padding-top: 28px;
+	border-top: 1px dashed #595959;
+}
+
+.popover-subtitle {
+	margin: 0;
+	margin-bottom: 2px;
+}
+
+.cart-price {
+	font-size: 16px;
+	line-height: 24px;
+	color: #AF7842;
+}
+
+.cart-delete {
+	grid-column: 2/3;
+	grid-row: 1/3;
+	background-image: url(/images/icons/trash.svg);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 /* main */
@@ -917,13 +1019,14 @@ body {
 	width: 20px;
 	height: 20px;
 	border: 2px solid #242424;
+	box-sizing: border-box;
 }
 
 .control-input[type="checkbox"]:checked+.control-mark::before,
 .control-input[type="checkbox"]:checked+.control-mark::after {
 	position: absolute;
-	top: 9px;
-	left: 4px;
+	top: 7px;
+	left: 2px;
 	width: 12px;
 	height: 2px;
 	background-color: #242424;
@@ -981,6 +1084,10 @@ body {
 	color: #000000;
 }
 
+.sorting-type {
+	margin-right: auto;
+}
+
 .select-controle {
 	font-weight: 700;
 	font-size: 16px;
@@ -988,11 +1095,7 @@ body {
 	width: 260px;
 	height: 44px;
 	padding: 10px 16px;
-}
-
-
-.sorting-type {
-	margin-right: auto;
+	border: 2px solid #242424;
 }
 
 .grid-toggle {
@@ -1148,4 +1251,96 @@ body {
 	padding: 14px 20px;
 	background-color: #000000;
 	color: #FFFFFF;
+}
+
+
+/* Модальное окно */
+.modal-container {
+	position: fixed;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-container-close {
+	display: none;
+}
+
+.modal-auth {
+	position: relative;
+	display: flex;
+	width: 440px;
+	margin: auto;
+	background-color: #FFFFFF;
+}
+
+.modal-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 56px;
+	height: 44px;
+	background-color: #FFFFFF;
+	border: none;
+	padding: 0;
+	background-image: url(/images/icons/cross.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.modal-auth-content {
+	display: grid;
+	margin: 40px;
+	font-family: 'PT Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #000000;
+}
+
+.modal-auth-title {
+	margin: 0;
+	margin-bottom: 24px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 35px;
+	text-transform: uppercase;
+}
+
+.field-group {
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.modal-auth-form .field {
+	width: 360px;
+	box-sizing: border-box;
+}
+
+.field-user-options {
+	display: flex;
+	justify-content: space-between;
+}
+
+.remind-password {
+	line-height: 22px;
+	color: #000000;
+}
+
+.auth-form-button {
+	width: 360px;
+	margin-bottom: 16px;
+}
+
+.modal-auth-form .auth-form-register {
+	width: 360px;
+	margin: 0;
+	background-color: #FFFFFF;
+	color: #000000;
+	box-sizing: border-box;
 }
