@@ -439,7 +439,7 @@ body {
 
 .button-all {
 	padding-right: 44px;
-	background-image: url(/images/icons/arrow-right.svg);
+	background-image: url("../images/icons/arrow-right.svg");
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
 	background-position: center right 20px;
