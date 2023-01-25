@@ -476,7 +476,7 @@ body {
 .slider-wrapper .button {
 	width: 48px;
 	height: 60px;
-	background-image: url('../images/icons/arrow-right.svg/');
+	background-image: url('../images/icons/arrow-right.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
